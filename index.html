@@ -403,35 +403,47 @@
                 <h3 class="s-subheading text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae cupiditate sed deserunt maxime! 
                 </h3>
             </div>
-            <form id="FrmContact" novalidate>
+            <form id="FrmContact" novalidate class="needs-validation" action="result.php">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-floating mb-4">
-                            <input type="text" id="name" class="form-control" placeholder="Adınız" required>
-                            <label for="name">Adınız</label>
+                            <input type="text" id="name" class="form-control" placeholder="Adınız" required maxlength="40" aria-describedby="ErrName">
+                            <label for="name">Adınız
+                                <span class="text-danger">*</span>
+                            </label>
                             <div class="invalid-feedback" id="ErrName"></div>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="email" id="email" class="form-control" placeholder="E-mail Adresiniz" required>
-                            <label for="email">E-mail Adresiniz</label>
+                            <input type="email" id="email" class="form-control" placeholder="E-mail Adresiniz" required maxlength="100" aria-describedby="ErrName">
+                            <label for="email">E-mail Adresiniz
+                                <span class="text-danger">*</span>
+                            </label>
                             <div class="invalid-feedback" id="ErrName"></div>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="tel" id="phone" class="form-control" placeholder="Telefon Numaranız" required>
-                            <label for="phone">Telefon Numaranız</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Telefon Numaranız" required maxlength="15" aria-describedby="ErrName">
+                            <label for="phone">Telefon Numaranız
+                                <span class="text-danger">*</span>
+                            </label>
                             <div class="invalid-feedback" id="ErrName"></div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating form-textarea mb-md-0">
-                            <textarea class="form-control" placeholder="Mesajınız" id="message"  required></textarea>
-                            <label for="message">Mesajınız</label>
+                            <textarea class="form-control" placeholder="Mesajınız" id="message"  required maxlength="300" aria-describedby="ErrName"></textarea>
+                            <label for="message">Mesajınız
+                                <span class="text-danger">*</span>
+                            </label>
                             <div class="invalid-feedback" id="ErrMessage"></div>
+                        </div>
+                        <div class="text-white text-end">
+                            <span  id="current-character">0</span>
+                            <span>/300</span>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-danger text-uppercase btn-lg py-3">Mesaj Gönder</button>
+                    <button type="submit" id="BtnContact" class="btn btn-danger text-uppercase btn-lg py-3">Mesaj Gönder</button>
                 </div>
             </form>
         </div>
@@ -633,5 +645,4 @@
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/extra.js"></script>
 </body>
-
 </html>
