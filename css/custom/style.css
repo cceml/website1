@@ -371,6 +371,20 @@ header.backImage .backImage-heading {
     background-image: url(../../img/map.png);
     background-position: center;
 }
+#contact input{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+#contact .form-textarea{
+    height: 91%;
+}
+#contact .form-textarea textarea{
+    height: 100%;
+    min-height: 10rem;
+}
+#contact .form-control:focus{
+    box-shadow: 1px 1px 12px #d8df0b;
+}
 
 /* contact end */
 
